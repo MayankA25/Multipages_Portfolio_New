@@ -1,0 +1,89 @@
+@keyframes hoverlist{
+    0%{
+        transform: scaleX(0);
+    }
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    transition: all 1s;
+}
+
+
+
+header{
+    /* margin: 0.25vw 0; */
+    position: sticky;
+    top: 0;
+    /* padding: 0.5vw; */
+    z-index: 200;
+    padding: 0.5vw 0.5vw;
+    backdrop-filter: blur(25px);
+    background-color: rgb(36, 54, 66, 0.4);
+}
+header nav{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    /* margin: auto; */
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    /* box-shadow:  0.5px 0.5px 10px black; */
+    padding: 1vw 2vw;
+    border-radius: 14px;
+    
+}
+header nav ul{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+header nav h1{
+    cursor: pointer;
+    color: white;
+    font-size: 2.5vw;
+}
+header nav h1:hover{
+    color: #F2E5BF;
+    transform: scale(1.1);
+
+}
+
+header nav ul li{
+    list-style: none;
+    /* color: white; */
+    font-weight: 800;
+    position: relative;
+    
+}
+header nav ul li:hover{
+    
+    transform: scale(1.1);
+}
+header nav ul li a:hover{
+    color: #F2E5BF;
+}
+header nav ul li:hover::after{
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 3px;
+    width: 100%;
+    background-color: #F2E5BF;
+    animation: hoverlist 1s ease;
+    
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: white;
+    /* color: #F2E5BF; */
+    /* color: black; */
+    font-size: 2vw;
+}

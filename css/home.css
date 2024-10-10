@@ -1,0 +1,196 @@
+@keyframes changeHeight{
+    0%{
+        height: 0vh;
+    }
+    100%{
+        height: 100vh;
+    }
+}
+
+@keyframes blinking{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes rotateframe1 {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotateframe2 {
+    0%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(540deg);
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    transition: all 1s;
+    /* height: 4444px; */
+    /* animation: changeHeight 2s ease 1s; */
+    overflow-x: hidden;
+}
+
+.loader{
+    z-index: -1;
+    display: flex;
+    position: absolute;
+    /* background-color: #243642; */
+    width: 100vw;
+    height: 100vh;
+    /* animation: changeHeight 1s ease; */
+}
+
+.loader .bar{
+    width: 16.67vw;
+    /* height: 100%; */
+    height: 0;
+    background-color: #243642;
+    /* animation: changeHeight 2s ease; */
+}
+
+
+/* main */
+
+main{
+    height: 90vh;
+    z-index: 200;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+main .intro{
+    height: 80vh;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main .intro .left{
+    display: flex;
+    flex-direction: column;
+    margin: 0 1vw;
+    /* align-items: center; */
+}
+main .intro .left h1{
+    color: white;
+    font-size: 6vw;
+}
+
+main .intro .right{
+    /* width: ; */
+    width: 20vw;
+    height: 20vw;
+    margin: 0 1vw;
+    position: relative;
+    border-radius: 900px;
+    padding: 10px;
+    overflow: hidden;
+}
+main .intro .right .profile-img{
+    width: 100%;
+    height: 100%;
+    /* box-shadow: 2px 2px 20px black; */
+    /* border: 7px solid black; */
+    border-radius: 900px;
+    /* background: transparent; */
+    position: relative;
+    background-color: #223746;
+    box-shadow: 2px 2px 5px black;
+    
+}
+main .intro .right::before{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 21vw;
+    height: 21vw;
+    background: conic-gradient(transparent, transparent, transparent, #F2E5BF);
+    overflow: hidden;
+    animation: rotateframe1 2s linear infinite;
+}
+main .intro .right::after{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 21vw;
+    height: 21vw;
+    background: conic-gradient(transparent, transparent, transparent, #F2E5BF);
+    overflow: hidden;
+    transform: rotate(180deg);
+    animation: rotateframe2 2s linear infinite;
+}
+
+
+
+.description{
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+
+
+.opacity-0{
+    opacity: 0;
+}
+
+
+.container{
+    display: flex;
+    margin: 0.5vw 0;
+    white-space: pre;
+    height: 2.5vw;
+}
+
+.text{
+    transition: none;
+    color: white;
+    font-size: 5vw;
+    font-weight: 1000;
+    /* color: #243642; */
+    color: #F2E5BF;
+}
+
+.blink{
+    transition: none;
+    /* height: 1.5vw; */
+    border: 0.3vw solid #F2E5BF;
+    margin: 0.5vw 6px;
+    padding: 2vw 0;
+    /* margin: 1vw 0; */
+    /* border-radius: 10px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* animation: blinking 1s ease infinite; */
+
+}
+
+
+
+
+@media (width<=1092px){
+    main .intro{
+        width: 90%;
+    }
+}
+
