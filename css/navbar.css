@@ -29,6 +29,7 @@ header nav{
     transition: none;
     width: 95%;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     /* margin: auto; */
     /* background-color: rgba(255, 255, 255, 0.2); */
