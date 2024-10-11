@@ -25,10 +25,18 @@ let changeBg = ()=>{
         for(let i = 0; i<array.length; i++){
             console.log(array[i])
             console.log(window.scrollY)
-            if(i!=0 && window.scrollY > 328){
+            if(i!=0 && window.scrollY > 128){
+                array[i-1].style.background = "none"
                 array[i-1].style.backgroundColor = color_array[i]
             }
-            array[i].style.backgroundColor = color_array[i]
+            // array[i].style.background = "url('imgs/bg.jpg')"
+            if(i == 0 && window.scrollY < 128){
+                array[i].style.background = "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)),url('imgs/bg.jpg')"
+                array[i].style.backgroundSize = "cover";
+                array[i].style.backgroundRepeat = "no-repeat"
+                // array[i].style.transition = "all 1s"
+                // array[i].style.backgroundColor = color_array[i]
+            }
             
         }
     }
@@ -59,11 +67,15 @@ let showBackgroundAnimation = ()=>{
     }
     setTimeout(()=>{
         body.style.backgroundColor = "#243642"
-        loader.style.backgroundColor = "#243642"
+        // loader.style.backgroundColor = "#243642"
+        loader.style.background = "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)),url('imgs/bg.jpg')"
+        // loader.style.background = "linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5))"
+        loader.style.backgroundRepeat = "no-repeat"
+        loader.style.backgroundSize = "cover"
         navbar.style.opacity = 1;
         main.style.display = "block"
         // body.style.backgroundColor = "white"
-    }, totalTime*1000)
+    }, totalTime*1000+400)
 
 }
 

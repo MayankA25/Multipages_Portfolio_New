@@ -21,11 +21,12 @@ header{
     top: 0;
     /* padding: 0.5vw; */
     z-index: 200;
-    padding: 0.5vw 0.5vw;
+    padding: 0.75vw 0.75vw;
     backdrop-filter: blur(25px);
     background-color: rgb(36, 54, 66, 0.4);
 }
 header nav{
+    transition: none;
     width: 95%;
     display: flex;
     justify-content: space-between;

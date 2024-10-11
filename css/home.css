@@ -11,9 +11,13 @@
     0%{
         opacity: 0;
     }
-    100%{
+    50%{
         opacity: 1;
     }
+    100%{
+        opacity: 0;
+    }
+    
 }
 
 @keyframes rotateframe1 {
@@ -45,6 +49,7 @@ body{
 }
 
 .loader{
+    /* transition: none; */
     z-index: -1;
     display: flex;
     position: absolute;
@@ -66,7 +71,8 @@ body{
 /* main */
 
 main{
-    height: 90vh;
+    /* height: 85vh; */
+    padding: 150px 0;
     z-index: 200;
     display: flex;
     justify-content: space-between;
@@ -74,7 +80,7 @@ main{
     
 }
 main .intro{
-    height: 80vh;
+    height: 100%;
     width: 85%;
     margin: auto;
     display: flex;
@@ -119,9 +125,10 @@ main .intro .right::before{
     position: absolute;
     top: 0;
     left: 0;
+    /* z-index: -1; */
     width: 21vw;
     height: 21vw;
-    background: conic-gradient(transparent, transparent, transparent, #F2E5BF);
+    background: conic-gradient(transparent, transparent, transparent, #395468);
     overflow: hidden;
     animation: rotateframe1 2s linear infinite;
 }
@@ -133,7 +140,7 @@ main .intro .right::after{
     z-index: -1;
     width: 21vw;
     height: 21vw;
-    background: conic-gradient(transparent, transparent, transparent, #F2E5BF);
+    background: conic-gradient(transparent, transparent, transparent, #395468);
     overflow: hidden;
     transform: rotate(180deg);
     animation: rotateframe2 2s linear infinite;
@@ -142,9 +149,27 @@ main .intro .right::after{
 
 
 .description{
-    height: 100vh;
+    padding: 1.5vw 0;
+    height: 50vh;
     background-color: black;
-    color: white;
+    color: #F2E5BF;
+    text-align: center;
+
+}
+
+.description h1{
+    font-size: 3vw;
+    text-decoration: underline;    
+}
+
+.description .desc{
+    width: 60%;
+    /* height: 40%; */
+    margin: 4vw auto;
+    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -191,6 +216,65 @@ main .intro .right::after{
 @media (width<=1092px){
     main .intro{
         width: 90%;
+    }
+}
+
+@media (width <= 700px) {
+    .loader{
+        height: 105vh;
+    }
+    main{
+        height: 15vh;
+    }
+    main .intro{
+        /* margin: 0 0 6% 0; */
+        height: 65%;
+        flex-direction: column-reverse;
+        /* justify-content: space-between; */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main .intro .left{
+        margin: 3vw 0;
+    }
+   
+    main .intro .right{
+        width: 20vw;
+        height: 20vw;
+        /* border-radius: ; */
+        margin: 3vw 0;
+    }
+    main .intro .right .profile-img{
+        
+        box-shadow: 2px 2px 20px black;
+    }
+    main .intro .right::after{
+        width: 26vw;
+        height: 26vw;
+        animation: none;
+        background: none;
+    }
+
+    main .intro .right::before{
+        width: 25.5vw;
+        height: 25.5vw;
+        animation: none;
+        background: none;
+    }
+
+    main .intro .left{
+        text-align: center;
+    }
+
+    .description{
+        height: 17.5vh;
+    }
+}
+
+@media (width<=600px) {
+    main{
+        height: 45vh;
     }
 }
 
