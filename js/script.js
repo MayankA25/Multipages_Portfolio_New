@@ -5,7 +5,7 @@ let loader = document.getElementsByClassName("loader")[0]
 let navbar = document.getElementsByClassName("navbar")[0]
 let main = document.getElementsByTagName("main")[0];
 // let text = document.getElementsByClassName("text")[0];
-
+let home = document.getElementById("home")
 
 let div1 = document.getElementsByClassName("loader")[0]
 let div2 = document.getElementsByClassName("description")[0]
@@ -47,9 +47,13 @@ main.style.display = "none"
 // div2.style.display = "none"
 
 let showPreloader = ()=>{
+    body.style.transition = "none"
+    // body.style.backgroundColor = "black"
     setTimeout(()=>{
         preloader.style.display = "none"
         body.style.overflowY = "visible"
+        // body.style.transition = "all 0.5s"
+        // window.scrollTo(0,-window.scrollY);
     }, 2000)
 }
 
@@ -79,8 +83,11 @@ let showBackgroundAnimation = ()=>{
 
 }
 
+
 window.onload = ()=>{
     div2.style.display = "none"
+
+    // window.scrollTo(0,0)
     showPreloader()
     setTimeout(()=>{
         showBackgroundAnimation()

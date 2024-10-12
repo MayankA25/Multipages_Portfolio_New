@@ -42,10 +42,11 @@
     padding: 0;
 }
 body{
-    transition: all 1s;
-    height: 4444px;
+    transition: all 0.5s;
+    max-height: 160vh;
     /* animation: changeHeight 2s ease 1s; */
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .loader{
@@ -154,6 +155,12 @@ main .intro .right::after{
     background-color: black;
     color: #F2E5BF;
     text-align: center;
+    border-bottom: 0.5vw solid white;
+    /* border-top: 6px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 
 }
 
@@ -172,8 +179,6 @@ main .intro .right::after{
     justify-content: center;
     align-items: center;
 }
-
-
 
 .opacity-0{
     opacity: 0;
@@ -210,6 +215,13 @@ main .intro .right::after{
     /* animation: blinking 1s ease infinite; */
 
 }
+
+
+
+
+
+
+
 
 
 

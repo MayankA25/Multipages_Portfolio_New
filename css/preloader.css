@@ -21,6 +21,7 @@
 
 .preloader::before{
     content: " ";
+    z-index: 200;
     position: absolute;
     height: 15vh;
     width: 15vh;
